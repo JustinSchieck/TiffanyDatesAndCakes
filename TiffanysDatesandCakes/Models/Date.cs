@@ -15,17 +15,22 @@ namespace TiffanysDatesandCakes.Models
             Cakes = new HashSet<Cake>();
         }
 
+        [Key]
         public string DateId { get; set; }
 
         [Required]
         [StringLength(250)]
+        [Display(Name = "Date")]
         public string Name { get; set; }
 
+        [Display(Name = "Create Date")]
         public DateTime CreateDate { get; set; }
 
+        [Display(Name = "Edit Date")]
         public DateTime EditDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Display(Name = "Cakes")]
         public virtual ICollection<CakeDate> CakeDates { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
