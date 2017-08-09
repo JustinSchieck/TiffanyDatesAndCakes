@@ -1,0 +1,58 @@
+﻿@model TiffanysDatesandCakes.Models.CakeDate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CakeDate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cake.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cake.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenreId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenreId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CakeDateId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
